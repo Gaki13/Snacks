@@ -1,18 +1,15 @@
 <!-- Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
 <?php 
-    function getArrayOfIntegers($min, $max, $nItems)
-    {
         $Array=[];
 
-        while(count($Array) > $nItems) {
-            $number = rand($min, $max);
+        while(count($Array) < 15) {
+            $number = rand(1, 100);
 
             if(!in_array($number, $Array)) {
                 $Array[] = $number;
             }
         }
-        return $Array;
-    }
+    var_dump ($Array);
 ?>
 
 
@@ -25,6 +22,5 @@
     <title>snack 1</title>
 </head>
 <body>
-    <?php var_dump  getArrayOfIntegers(1, 100, 15) ?>
 </body>
 </html>
